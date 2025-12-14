@@ -101,3 +101,4 @@ InitTestScene*.unity*
 *.obj
 AR2VR_Project/Library/*
 AR2VR_Project/Temp/*
+AR2VR_Project/.vscode/*
