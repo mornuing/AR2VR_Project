@@ -33,7 +33,6 @@ public class LoadingScreen : MonoBehaviour
     public void OnNextSceneLoadFinish()
     {
         isNextSceneLoadFinish = true;
-        Debug.LogError("Next Scene Load Finish");
     }
     private IEnumerator FakeLoading()
     {

@@ -9,6 +9,7 @@ public class GameDataManager : SingletonMonoBehaviour<GameDataManager>
     public void SetUserAccount(UserAccount userAccount)
     {
         this.userAccount = userAccount;
+        Debug.LogError($"{userAccount.account} {userAccount.password}");
     }
 }
 public struct UserAccount

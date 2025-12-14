@@ -5,7 +5,7 @@ using UnityEngine;
 public class AuthManager : SingletonMonoBehaviour<AuthManager>
 {
     private bool allowAllAccount = true;
-    public void Auth(LoginScreen loginScreen, string account, string password = "")
+    public bool Auth(string account, string password = "")
     {
         // auth check 
         // if success => login else ignore
@@ -17,7 +17,8 @@ public class AuthManager : SingletonMonoBehaviour<AuthManager>
                 password = password
             };
             GameDataManager.Instance.SetUserAccount(userAccount);
-            GameSceneManager.Instance.LoadtoLoadingScene(Constants.SceneNames.CONTENT_SCENE);
+            return true;
         }
+        return false;
     }
 }
