@@ -7,6 +7,12 @@ public class GameSpriteManager : SingletonMonoBehaviour<GameSpriteManager>
 {
     [SerializeField] private ImageSet contentImgSet;
     
+    /// <summary>
+    /// Get Random imgs for display
+    /// </summary>
+    /// <param name="amount"></param>
+    /// <returns></returns>
+    /// <exception cref="System.ArgumentException"></exception>
     public List<Sprite> GetRandomImgs(int amount)
     {
         if(contentImgSet.Images.Count < amount)

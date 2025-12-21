@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginScreen : MonoBehaviour
+public class LoginScene : MonoBehaviour
 {
     [Header("InputField")]
     [SerializeField] private TMP_InputField accountInput;
@@ -40,10 +40,16 @@ public class LoginScreen : MonoBehaviour
             HintCoroutine = null;
         }
     }
+    /// <summary>
+    /// For exit button, would close the game immediately
+    /// </summary>
     public void OnExitButtonClicked()
     {
         Application.Quit();
     }
+    /// <summary>
+    /// For login button, could check account and password is filled first
+    /// </summary>
     public void OnLoginButtonClicked()
     {
         if(accountInput.text != string.Empty && passwordInput.text != string.Empty)
@@ -62,10 +68,16 @@ public class LoginScreen : MonoBehaviour
             HintCoroutine = StartCoroutine(ShowHintText(EMPTY_CHECK_TEXT));
         }
     }
+    /// <summary>
+    /// For register button, could go to outer web or popup to regist
+    /// </summary>
     public void OnRegisterButtonClicked()
     {
         // Show register page or outer url
     }
+    /// <summary>
+    /// For password show/hide, easy for user to check password
+    /// </summary>
     public void OnPasswordHideButtonClicked()
     {
         if (isPasswordShow)
@@ -81,6 +93,9 @@ public class LoginScreen : MonoBehaviour
         passwordInput.ForceLabelUpdate();
         isPasswordShow = !isPasswordShow;
     }
+    /// <summary>
+    /// Forget password button, could go outer web or popup to send auth mail
+    /// </summary>
     public void OnForgetPasswordButtonClicked()
     {
         // sent change password mail

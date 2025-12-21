@@ -5,6 +5,13 @@ using UnityEngine;
 public class AuthManager : SingletonMonoBehaviour<AuthManager>
 {
     private bool allowAllAccount = true;
+
+    /// <summary>
+    /// Auth the account and password is correct
+    /// </summary>
+    /// <param name="account"></param>
+    /// <param name="password"></param>
+    /// <returns></returns>
     public bool Auth(string account, string password = "")
     {
         // auth check 

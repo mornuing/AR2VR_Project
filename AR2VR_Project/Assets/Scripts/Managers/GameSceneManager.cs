@@ -27,7 +27,11 @@ public class GameSceneManager : SingletonMonoBehaviour<GameSceneManager>
         StartCoroutine(LoadtoLoadingScene());
     }
 
-    public void StartLoadingNextScene(LoadingScreen loadingScreen)
+    /// <summary>
+    /// Start load next scene in loading scene
+    /// </summary>
+    /// <param name="loadingScreen"></param>
+    public void StartLoadingNextScene(LoadingScene loadingScreen)
     {
         StartCoroutine(LoadNextScene(loadingScreen));
     }
@@ -37,7 +41,7 @@ public class GameSceneManager : SingletonMonoBehaviour<GameSceneManager>
         yield return SceneManager.LoadSceneAsync(Constants.SceneNames.LOADING_SCENE, LoadSceneMode.Single);
     }
 
-    private IEnumerator LoadNextScene(LoadingScreen loadingScreen)
+    private IEnumerator LoadNextScene(LoadingScene loadingScreen)
     {
         yield return null;
         asyncOperation = SceneManager.LoadSceneAsync(_nextSceneName, LoadSceneMode.Single);

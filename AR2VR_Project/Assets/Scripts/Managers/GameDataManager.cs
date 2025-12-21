@@ -6,6 +6,10 @@ public class GameDataManager : SingletonMonoBehaviour<GameDataManager>
 {
     private UserAccount userAccount;
 
+    /// <summary>
+    /// Set up data and could save more data further
+    /// </summary>
+    /// <param name="userAccount"></param>
     public void SetUserAccount(UserAccount userAccount)
     {
         this.userAccount = userAccount;

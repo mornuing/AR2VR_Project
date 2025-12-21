@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadingScreen : MonoBehaviour
+public class LoadingScene : MonoBehaviour
 {
     [SerializeField] private Slider progressBar;
 
@@ -30,6 +30,9 @@ public class LoadingScreen : MonoBehaviour
             fakeLoadingCor = null;
         }
     }
+    /// <summary>
+    /// Function for gamescenemanager to inform when next scene is load done
+    /// </summary>
     public void OnNextSceneLoadFinish()
     {
         isNextSceneLoadFinish = true;
